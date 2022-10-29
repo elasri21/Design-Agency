@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap');
+:root {
+    /* project Colors */
+    --dark-blue: #3a50f9;
+    --blue-sky: #38c0e7;
+    /*old colors*/
+    --main-color: #333;
+    --yellow: #ffc800;
+    --pink: #ee4dc6;
+    --black: #111;
+    --text-c: #555c66;
+    --bg-footer: #333;
+    --light-text: #b3b3b3;
+    --main-bg: #f2f2f2;/* icon bg */
+    --shadow: rgb(0 0 0 / 20%);
+    --input-border: #d9d9d9;
+}
+/* global rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+ul {
+    margin: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+}
+@media (min-width: 922px) {
+    .container {
+        margin-left: 100px !important;
+        margin-right: 100px !important;
+    }
+}
+.container {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+/* start header */
+header {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 111;
+    height: 74px;
+}
+header form input {
+    border: 1px solid var(--input-border);
+}
+header .search input::placeholder {
+    color: var(--input-border);
+}
+header .search i {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+}
+@media (max-width: 767px) {
+    header nav {
+        display: none;
+        position: absolute;
+        top: 74px;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-footer);
+        padding: 30px;
+    }
+    header nav ul {
+        flex-direction: column;
+    }
+    header nav ul li {
+        flex-basis: 100%;
+    }
+    header nav ul li a {
+        color: white !important;
+    }
+    header nav .close {
+        display: block !important;
+        top: 20px;
+        right: 20px;
+    }
+}
+
+header nav ul li a {
+    color: var(--footer-bg);
+}
+header nav ul li a:hover {
+    opacity: .75;
+}
+header nav .close {
+    color: white;
+    display: none;
+}
+@media (max-width: 767px) {
+    header .open {
+        display: block !important;
+    }
+}
+header .open {
+    display: none;
+}
+/* end header */
+/* start landing*/
+.landing {
+    background-image: url("../images/landing.jpg");
+}
+.landing .container a:hover {
+    background-color: var(--pink);
+    color: white;
+}
+/* end landing */
+
+/* start design*/
+@media (max-width: 921px) {
+    .design .container::after {
+        left: 0 !important;
+    }
+}
+.design .container::after {
+    content: "";
+    width: 150px;
+    height: 150px;
+    border: 40px solid var(--dark-blue);
+    border-radius: 50%;
+    position: absolute;
+    left: 30%;
+    top: 0;
+    background-color: white;
+    z-index: -1;
+}
+@media (max-width: 921px) {
+    .design .container .image::before {
+        right: 0 !important;
+        bottom: 0 !important;
+    }
+}
+.design .container .image::before {
+    content: "";
+    width: 150px;
+    height: 150px;
+    border: 20px solid var(--dark-blue);
+    border-radius: 50%;
+    position: absolute;
+    right: -50px;
+    bottom: -50px;
+    background-image: url("../images/illus.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.design .container .image::after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: var(--dark-blue);
+}
+.design .container .info a:hover {
+    background-color: var(--pink);
+}
+/* end design */
+
+/* start our-team*/
+@media (max-width: 600px) {
+    .our-team .container .member {
+        flex-direction: column;
+        align-items: center;
+    }
+    .our-team .container .member  p,
+    .our-team .container .member  h3 {
+        text-align: center;
+    }
+    .our-team .container .member .social {
+        justify-content: center;
+    }
+}
+.our-team .container .member .social a:hover {
+    background-color: var(--pink);
+}
+/* end our-team */
+
+/* start blue-section  */
+.blue-section .container form input:focus {
+    border-color: var(--pink);
+}
+.blue-section .container form .submit:hover {
+    color: var(--pink);
+    background-color: white;
+}
+/* end blue-section  */
+
+/* start testimonial*/
+.testimonial .container > p,
+.testimonial .container .long-text {
+    max-width: 400px;
+}
+/* end  testimonial */
+
+/* start secret-sec */
+@media (min-width: 768px) {
+    .secret-sec .container .info {
+        align-self: center;
+    }
+}
+@media (max-width: 767px) {
+    .secret-sec .container .info {
+        order: 1;
+    }
+    .secret-sec .container .image {
+        order: 2;
+    }
+}
+.secret-sec .container a:hover {
+    background-color: var(--pink);
+}
+/* end secret-sec */
+
+/* work */
+.work .container > p {
+    max-width: 600px;
+}
+.work .container .boxes {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+/* work */
+
+/* contact */
+@media (min-width: 768px) {
+    .contact .container > div  {
+        width: 40%;
+    }
+    .contact .container form  {
+        width: calc(60% - 30px);
+    }
+}
+@media (max-width: 767px) {
+    .contact .container {
+        flex-direction: column;
+    }
+}
+.contact form textarea {
+    height: 150px;
+}
+.contact form .submit-2:hover {
+    background-color: var(--pink);
+} 
+.contact form .check-box {
+    appearance: none;
+}
+.contact form .check-box + label::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--dark-blue);
+    position: absolute;
+    left: -35px;
+    transition: .3s;
+}
+.contact form .check-box:checked + label::before {
+    background-color: var(--dark-blue);
+}
+.contact form .check-box + label::after {
+    content: "\f00c";
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    color: white;
+    position: absolute;
+    left: -31px;
+}
+/* contact */
+
+/* start footer */
+footer .text {
+    max-width: 500px;
+}
+footer a:hover {
+    color: var(--dark-blue);
+    text-decoration: underline;
+}
+/* end footer */
